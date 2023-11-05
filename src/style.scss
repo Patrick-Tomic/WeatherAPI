@@ -1,20 +1,101 @@
-$width:40vw;
-#card{
-    border: solid 1px black;
+$width:350px;
+body{
+    margin: 0;
+    width: 100%;
+    background-color: beige;
     display: flex;
     flex-direction: column;
-    width: $width;
-    .label{
-        p{
-            margin-left: 2vw;
-            font-size: 20px;
-            font-weight: bold;
-        }
-        display: flex;
-        label{
-            font-size: 24px;
-            margin-top: 1vh;
-            margin-left: 5vw;
-        }
+     
+    
+}
+#header{
+    background-color: green; height: 20vh;  
+    
+    h2{
+        color: white;
     }
+}
+#mid{
+    height: 60vh;
+  #leftArrow{
+    float:left;
+    margin-top: 20vh;
+    margin-left: 15vw;
+  }
+  #rightArrow{
+    float:right;
+    margin-top: 20vh;
+    margin-right: 15vw;
+  }
+    #wrap{
+        overflow: hidden;         
+        position: absolute;
+        height: 50vh;
+        width: 50vh;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        box-shadow: 0px 4px 25px -4px rgba(0,0,0,1);
+        //animation: ani 5s infinite ease-in-out;
+        border-radius: 5px;
+     
+      
+     border: 1px solid black;
+     
+     #content{
+        height: 100%;
+        transition: all 0.5s ease-in-out;      
+         #divWrap{ 
+            height: 50vh;
+            width: 50vh;
+            float: left;
+            overflow: hidden;
+             #card{
+                display: flex;
+                flex-direction: column;
+                 height: 50vh;
+                align-items: center;
+                 background-color: white;
+                 border: solid 1px black;     
+                 .label{
+                     p{
+                         margin-left: 2vw;
+                         font-size: 20px;
+                         font-weight: bold;
+                     }
+                     display: flex;
+                     label{
+                         font-size: 24px;
+                         margin-top: 1vh;
+                         
+                     }
+                 }
+             }
+         }
+   
+     }
+     button{
+         height: 10vh;
+          
+         margin: 10vh 11vw;
+     }
+      
+      
+     
+ }
+ 
+}
+ #searchLabel{
+    margin-left: 36%;
+ }
+#search{
+    width: 20vw;
+    margin-left: 36%;
+}
+#enter{
+    width: 5vw;
+    height: 3vh;
+    border-radius: 5px;
+    color: white;
+    background-color: green;
 }

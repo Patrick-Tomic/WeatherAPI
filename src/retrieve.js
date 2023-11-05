@@ -13,19 +13,36 @@ class cityWeather{
     }
 }
 export async function getWeather(city){     
+    const content = document.getElementById('content');
+    try{
     const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=298bf6c3b43b4a55875191548230211&q=${city}`,{mode:'cors'});
     const data = await response.json();
-    
+    console.log(data)
     const object = new cityWeather(data.location.name,data.location.region,data.location.country,data.current.temp_f,data.current.temp_c,data.current.condition.text,data.current.wind_mph,data.current.wind_kph);
     console.log(object);
     buildWeather(object);
+    }catch(err){
+        alert('Not a real city');
+        
+    }
+    if(content.children.length>1){
+        content.removeChild(content.firstChild);
+       } 
+  
 }
 export function buildWeather(object){
-    const content = document.getElementById('content');
+   
+     const content = document.getElementById('content');
+     
     const div = document.createElement('div');
     div.setAttribute('id','card');
+    const wrapper = document.createElement('div');
+    wrapper.setAttribute('id','divWrap');
+    
     for(let i = 0;i<8;i++){
         const container = document.createElement('div');
+      
+      
         container.classList.add('label');
         const label = document.createElement('label');
         const p = document.createElement('p');
@@ -98,5 +115,6 @@ export function buildWeather(object){
                 break;
         }
     }
-    content.appendChild(div);
+    wrapper.appendChild(div);
+    content.appendChild(wrapper);
 }

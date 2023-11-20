@@ -6,22 +6,28 @@
     <title>Document</title>
 <script defer src="runtime.js"></script><script defer src="bundle.js"></script></head>
 <body>
-    <div id="header">
+  <header>
         <h2>Weather App</h2>
-    </div>
-    <div id="wrap">   
-        <button id="leftArrow"><svg width="98" height="77" viewBox="0 0 98 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+  </header>
+    <div id="mid">
+      <!--   <button id="leftArrow"><svg width="98" height="77" viewBox="0 0 98 77" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0.0332047 40.6155L96.4221 0.235881L71.8832 35.9868L98 77L0.0332047 40.6155Z" fill="#326BFF"/>
             </svg>
-            </button>
+            </button> -->
+    <div id="wrap">   
+        
         <div id="content"></div>
-        <button id="rightArrow"><svg width="95" height="77" viewBox="0 0 95 77" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M94.8704 36.6927L0.422058 0.235877L25.4947 34.967L2 77L94.8704 36.6927Z" fill="#326BFF"/>
-            </svg>
-            </button>
+        <div id = 'divWrap'></div>
     </div>
-    <label for="search">Search City</label>
-    <input type="text" name="search">
- 
+    <!-- <button id="rightArrow"><svg width="95" height="77" viewBox="0 0 95 77" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M94.8704 36.6927L0.422058 0.235877L25.4947 34.967L2 77L94.8704 36.6927Z" fill="#326BFF"/>
+        </svg>
+        </button> -->
+    </div>
+    <label id="searchLabel" for="search">Search City</label>
+    <div>
+    <input type="text" name="search" id="search">
+    <button id="enter">Enter</button>
+    </div>
 </body>
 </html>

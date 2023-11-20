@@ -44,14 +44,20 @@ header{
       
        
          #divWrap{ 
-           
-           width: 50vw;
-             gap: 2vw;
+           animation-name: rotate;
+           animation-duration: 30s;
+           animation-iteration-count: infinite;
+
+        
+           width: 30vw;
+          
+              
             display: flex;
-            overflow: hidden;
+           
              #card{
                 display: flex;
                 flex-direction: column;
+                padding: 5px;
                  min-width: 30vw;
                 align-items: center;
                  background-color: white;
@@ -97,4 +103,15 @@ header{
     border-radius: 5px;
     color: white;
     background-color: green;
+}
+
+@keyframes rotate {
+    0%{
+        transform: translateX(-30vw);
+    }
+    20%{transform: translateX(-60vw);}
+    40%{transform: translateX(-90vw);}
+    60%{transform: translateX(-120vw);}
+    80%{transform: translateX(-150vw);}
+    100%{transform: translateX(-180vw);}    
 }

@@ -44,13 +44,10 @@ header{
       
        
          #divWrap{ 
-           animation-name: rotate;
-           animation-duration: 30s;
-           animation-iteration-count: infinite;
-
-        
+           
+            transform: translateX(-30);
            width: 30vw;
-          
+            overflow: hidden;
               
             display: flex;
            
@@ -104,14 +101,4 @@ header{
     color: white;
     background-color: green;
 }
-
-@keyframes rotate {
-    0%{
-        transform: translateX(-30vw);
-    }
-    20%{transform: translateX(-60vw);}
-    40%{transform: translateX(-90vw);}
-    60%{transform: translateX(-120vw);}
-    80%{transform: translateX(-150vw);}
-    100%{transform: translateX(-180vw);}    
-}
+ 

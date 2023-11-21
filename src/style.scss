@@ -1,3 +1,4 @@
+ 
 $width:350px;
 body{
     margin: 0;
@@ -17,16 +18,27 @@ header{
 }
 #mid{
     
-  #leftArrow{
-    float:left;
-    margin-top: 20vh;
-    margin-left: 15vw;
-  }
-  #rightArrow{
-    float:right;
-    margin-top: 20vh;
-    margin-right: 15vw;
-  }
+       
+        
+        
+        #leftArrow{
+            top: 40%;
+            left: 20%;
+            background-color: beige;
+            position: absolute;
+            padding: 0;
+            border: none;
+          }
+          #rightArrow{
+              top: 40%;
+              background-color: beige;
+              left: 70%;
+              position: absolute;
+              padding: 0;
+              border: none;
+          }
+      
+ 
     #wrap{
         overflow: hidden;         
         position: absolute;
@@ -44,10 +56,9 @@ header{
       
        
          #divWrap{ 
-           
-            transform: translateX(-30);
            width: 30vw;
-            overflow: hidden;
+            transition: transform 1s ease-in;
+           transform: translateX(0vw);
               
             display: flex;
            
@@ -74,13 +85,9 @@ header{
                  }
              }
          }
-   
+       
      }
-     button{
-         height: 10vh;
-          
-         margin: 10vh 11vw;
-     }
+    
       
       
      

@@ -20,26 +20,27 @@ header{
     
        
         
+    #leftArrow{
+        top: 40%;
+        left: 20%;
+        background-color: beige;
+        position: absolute;
+        padding: 0;
+        border: none;
+      }
+      #rightArrow{
+          top: 40%;
+          background-color: beige;
+          left: 70%;
+          position: absolute;
+          padding: 0;
+          border: none;
+      }
         
-        #leftArrow{
-            top: 40%;
-            left: 20%;
-            background-color: beige;
-            position: absolute;
-            padding: 0;
-            border: none;
-          }
-          #rightArrow{
-              top: 40%;
-              background-color: beige;
-              left: 70%;
-              position: absolute;
-              padding: 0;
-              border: none;
-          }
       
  
     #wrap{
+      
         overflow: hidden;         
         position: absolute;
         top: 50%;

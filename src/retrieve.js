@@ -33,7 +33,6 @@ export function buildWeather(object){
     const wrapper = document.getElementById('divWrap')
     const div = document.createElement('div');
     div.setAttribute('id','card');
-   
     
     for(let i = 0;i<8;i++){
         const container = document.createElement('div');

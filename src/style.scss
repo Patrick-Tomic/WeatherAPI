@@ -18,7 +18,23 @@ header{
 }
 #mid{
     
-       
+       .cardButtons{
+        
+        position: absolute;
+        top: 73%;
+        left: 47%;
+        button{
+            margin-left: 3px;
+            background-color: #007FFF;
+            width: 1vw;
+            height: 2vh;
+            border-radius: 50%;
+            border: none;
+        }
+        button:hover{
+            background-color: #6CB4EE;
+        }
+       }
         
     #leftArrow{
         top: 40%;

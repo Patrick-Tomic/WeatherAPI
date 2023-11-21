@@ -35,6 +35,7 @@ getWeather('tuzla')
  
  leftArrow.addEventListener('click', ()=>{
   vw = 31
+  const divWrap = document.getElementById('divWrap')
   console.log('heard')
    if(count == 0){
     vw = vw*count
@@ -48,6 +49,7 @@ getWeather('tuzla')
  })
  rightArrow.addEventListener('click',()=>{
   vw = 31
+  const divWrap = document.getElementById('divWrap')
   console.log('heard')
   if(count == -4){
     count = 0
@@ -60,5 +62,34 @@ getWeather('tuzla')
   divWrap.style.transform = `translateX(${vw}vw)` 
   }
  })
+ const card1 = document.querySelector('.card1')
+ const card2 = document.querySelector('.card2')
+ const card3 = document.querySelector('.card3')
+ const card4 = document.querySelector('.card4')
+ const card5 = document.querySelector('.card5')
+ card1.addEventListener('click', ()=>{
+  const divWrap = document.getElementById('divWrap')
+  divWrap.style.transform = 'translateX(0vw)'
+ })
+ card2.addEventListener('click', ()=>{
+  const divWrap = document.getElementById('divWrap')
+  divWrap.style.transform = 'translateX(-31vw)'
+ })
+ card3.addEventListener('click', ()=>{
+  const divWrap = document.getElementById('divWrap')
+  divWrap.style.transform = 'translateX(-62vw)'
+ })
+ card4.addEventListener('click', ()=>{
+  const divWrap = document.getElementById('divWrap')
+  divWrap.style.transform = 'translateX(-92vw)'
+ })
+ card5.addEventListener('click', ()=>{
+  const divWrap = document.getElementById('divWrap')
+  divWrap.style.transform = 'translateX(-123vw)'
+ })
+ 
+  
+ 
+ 
  
  

@@ -18,7 +18,7 @@ header{
 }
 #mid{
     
-       .cardButtons{
+       #cardButtons{
         
         position: absolute;
         top: 73%;
@@ -73,7 +73,7 @@ header{
       
        
          #divWrap{ 
-           width: 30vw;
+           width: 28vw;
             transition: transform 1s ease-in;
            transform: translateX(0vw);
               

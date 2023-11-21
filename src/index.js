@@ -1,9 +1,10 @@
 import './style.scss';
+ 
 import { getWeather } from './retrieve';
 let count = 0
 let vw =32
 const mid = document.querySelector('#mid')
-
+const cardBtns = document.getElementById('cardButtons')
 const leftArrow = document.getElementById('leftArrow')
 const rightArrow = document.getElementById('rightArrow')
 const wrap = document.getElementById('wrap');
@@ -19,6 +20,7 @@ getWeather('New York')
 getWeather('tuzla')
  enter.addEventListener('click',()=>{
   const divWrap = document.getElementById('divWrap')
+  clearInterval(interval)
   let count = divWrap.childElementCount
   console.log(count)
   if(divWrap.childElementCount >=1){
@@ -28,6 +30,7 @@ getWeather('tuzla')
     content.appendChild(div)
     leftArrow.style.visibility = 'hidden'
     rightArrow.style.visibility = 'hidden'
+    cardBtns.style.visibility = 'hidden'
   }  
    getWeather(search.value);
     search.value = ''
@@ -36,7 +39,6 @@ getWeather('tuzla')
  leftArrow.addEventListener('click', ()=>{
   vw = 31
   const divWrap = document.getElementById('divWrap')
-  console.log('heard')
    if(count == 0){
     vw = vw*count
     divWrap.style.transform = `translateX(${vw}vw)` 
@@ -50,7 +52,6 @@ getWeather('tuzla')
  rightArrow.addEventListener('click',()=>{
   vw = 31
   const divWrap = document.getElementById('divWrap')
-  console.log('heard')
   if(count == -4){
     count = 0
     vw = vw * count
@@ -89,7 +90,22 @@ getWeather('tuzla')
  })
  
   
- 
+  
+  
+
+ const interval = setInterval(()=>{
+  const divWrap = document.getElementById('divWrap')
+    let vw = 31
+    if(count == -4){ count = 0
+      vw = vw*count
+      divWrap.style.transform = `translateX(${vw}vw)` 
+    }
+    else {count--
+    vw = vw*count
+    divWrap.style.transform = `translateX(${vw}vw)` }
+    const enter = document.getElementById('enter');
+     
+ },5000)
  
  
  

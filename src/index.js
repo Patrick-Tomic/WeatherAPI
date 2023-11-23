@@ -47,6 +47,20 @@ getWeather('tuzla')
     vw = count*vw
     console.log(vw)
     divWrap.style.transform = `translateX(${vw}vw)` 
+    clearInterval(interval)
+  setInterval(()=>{
+    const divWrap = document.getElementById('divWrap')
+      let vw = 31
+      if(count == -4){ count = 0
+        vw = vw*count
+        divWrap.style.transform = `translateX(${vw}vw)` 
+      }
+      else {count--
+      vw = vw*count
+      divWrap.style.transform = `translateX(${vw}vw)` }
+      const enter = document.getElementById('enter');
+       
+   },5000)
    }
  })
  rightArrow.addEventListener('click',()=>{
@@ -61,6 +75,20 @@ getWeather('tuzla')
   vw = vw * count
   console.log(vw)
   divWrap.style.transform = `translateX(${vw}vw)` 
+  clearInterval(interval)
+  setInterval(()=>{
+    const divWrap = document.getElementById('divWrap')
+      let vw = 31
+      if(count == -4){ count = 0
+        vw = vw*count
+        divWrap.style.transform = `translateX(${vw}vw)` 
+      }
+      else {count--
+      vw = vw*count
+      divWrap.style.transform = `translateX(${vw}vw)` }
+      const enter = document.getElementById('enter');
+       
+   },5000)
   }
  })
  const card1 = document.querySelector('.card1')
@@ -71,29 +99,104 @@ getWeather('tuzla')
  card1.addEventListener('click', ()=>{
   const divWrap = document.getElementById('divWrap')
   divWrap.style.transform = 'translateX(0vw)'
+  clearInterval(interval)
+  setInterval(()=>{
+    const divWrap = document.getElementById('divWrap')
+      let vw = 31
+      if(count == -4){ count = 0
+        vw = vw*count
+        divWrap.style.transform = `translateX(${vw}vw)` 
+      }
+      else {count--
+      vw = vw*count
+      divWrap.style.transform = `translateX(${vw}vw)` }
+      const enter = document.getElementById('enter');
+       
+   },5000)
+   count = 0
  })
  card2.addEventListener('click', ()=>{
   const divWrap = document.getElementById('divWrap')
   divWrap.style.transform = 'translateX(-31vw)'
+  clearInterval(interval)
+  setInterval(()=>{
+    const divWrap = document.getElementById('divWrap')
+      let vw = 31
+      if(count == -4){ count = 0
+        vw = vw*count
+        divWrap.style.transform = `translateX(${vw}vw)` 
+      }
+      else {count--
+      vw = vw*count
+      divWrap.style.transform = `translateX(${vw}vw)` }
+      const enter = document.getElementById('enter');
+       
+   },5000)
+   count = -1
  })
  card3.addEventListener('click', ()=>{
   const divWrap = document.getElementById('divWrap')
   divWrap.style.transform = 'translateX(-62vw)'
+  clearInterval(interval)
+  setInterval(()=>{
+    const divWrap = document.getElementById('divWrap')
+      let vw = 31
+      if(count == -4){ count = 0
+        vw = vw*count
+        divWrap.style.transform = `translateX(${vw}vw)` 
+      }
+      else {count--
+      vw = vw*count
+      divWrap.style.transform = `translateX(${vw}vw)` }
+      const enter = document.getElementById('enter');
+       
+   },5000)
+   count = -2
  })
  card4.addEventListener('click', ()=>{
   const divWrap = document.getElementById('divWrap')
   divWrap.style.transform = 'translateX(-92vw)'
+  clearInterval(interval)
+  setInterval(()=>{
+    const divWrap = document.getElementById('divWrap')
+      let vw = 31
+      if(count == -4){ count = 0
+        vw = vw*count
+        divWrap.style.transform = `translateX(${vw}vw)` 
+      }
+      else {count--
+      vw = vw*count
+      divWrap.style.transform = `translateX(${vw}vw)` }
+      const enter = document.getElementById('enter');
+       
+   },5000)
+   count = -3
  })
  card5.addEventListener('click', ()=>{
   const divWrap = document.getElementById('divWrap')
   divWrap.style.transform = 'translateX(-123vw)'
+  clearInterval(interval)
+  setInterval(()=>{
+    const divWrap = document.getElementById('divWrap')
+      let vw = 31
+      if(count == -4){ count = 0
+        vw = vw*count
+        divWrap.style.transform = `translateX(${vw}vw)` 
+      }
+      else {count--
+      vw = vw*count
+      divWrap.style.transform = `translateX(${vw}vw)` }
+      const enter = document.getElementById('enter');
+       
+   },5000)
+   count = -4
  })
  
   
   
   
 
- const interval = setInterval(()=>{
+ var interval = setInterval(()=>{
   const divWrap = document.getElementById('divWrap')
     let vw = 31
     if(count == -4){ count = 0

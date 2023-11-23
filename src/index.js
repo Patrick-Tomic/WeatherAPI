@@ -47,8 +47,9 @@ getWeather('tuzla')
     vw = count*vw
     console.log(vw)
     divWrap.style.transform = `translateX(${vw}vw)` 
-    clearInterval(interval)
-  setInterval(()=>{
+   }
+   clearInterval(interval)
+  interval = setInterval(()=>{
     const divWrap = document.getElementById('divWrap')
       let vw = 31
       if(count == -4){ count = 0
@@ -61,7 +62,6 @@ getWeather('tuzla')
       const enter = document.getElementById('enter');
        
    },5000)
-   }
  })
  rightArrow.addEventListener('click',()=>{
   vw = 31
@@ -75,8 +75,9 @@ getWeather('tuzla')
   vw = vw * count
   console.log(vw)
   divWrap.style.transform = `translateX(${vw}vw)` 
+  }
   clearInterval(interval)
-  setInterval(()=>{
+  interval = setInterval(()=>{
     const divWrap = document.getElementById('divWrap')
       let vw = 31
       if(count == -4){ count = 0
@@ -89,7 +90,6 @@ getWeather('tuzla')
       const enter = document.getElementById('enter');
        
    },5000)
-  }
  })
  const card1 = document.querySelector('.card1')
  const card2 = document.querySelector('.card2')
@@ -100,7 +100,7 @@ getWeather('tuzla')
   const divWrap = document.getElementById('divWrap')
   divWrap.style.transform = 'translateX(0vw)'
   clearInterval(interval)
-  setInterval(()=>{
+  interval = setInterval(()=>{
     const divWrap = document.getElementById('divWrap')
       let vw = 31
       if(count == -4){ count = 0
@@ -119,7 +119,7 @@ getWeather('tuzla')
   const divWrap = document.getElementById('divWrap')
   divWrap.style.transform = 'translateX(-31vw)'
   clearInterval(interval)
-  setInterval(()=>{
+  interval = setInterval(()=>{
     const divWrap = document.getElementById('divWrap')
       let vw = 31
       if(count == -4){ count = 0
@@ -138,7 +138,7 @@ getWeather('tuzla')
   const divWrap = document.getElementById('divWrap')
   divWrap.style.transform = 'translateX(-62vw)'
   clearInterval(interval)
-  setInterval(()=>{
+  interval = setInterval(()=>{
     const divWrap = document.getElementById('divWrap')
       let vw = 31
       if(count == -4){ count = 0
@@ -157,7 +157,7 @@ getWeather('tuzla')
   const divWrap = document.getElementById('divWrap')
   divWrap.style.transform = 'translateX(-92vw)'
   clearInterval(interval)
-  setInterval(()=>{
+  interval = setInterval(()=>{
     const divWrap = document.getElementById('divWrap')
       let vw = 31
       if(count == -4){ count = 0
@@ -176,7 +176,7 @@ getWeather('tuzla')
   const divWrap = document.getElementById('divWrap')
   divWrap.style.transform = 'translateX(-123vw)'
   clearInterval(interval)
-  setInterval(()=>{
+  interval = setInterval(()=>{
     const divWrap = document.getElementById('divWrap')
       let vw = 31
       if(count == -4){ count = 0
@@ -191,11 +191,6 @@ getWeather('tuzla')
    },5000)
    count = -4
  })
- 
-  
-  
-  
-
  var interval = setInterval(()=>{
   const divWrap = document.getElementById('divWrap')
     let vw = 31

@@ -36,12 +36,17 @@ export function buildWeather(object){
     
     for(let i = 0;i<8;i++){
         const container = document.createElement('div');
-      
-      
+        const btn = document.createElement('button')
+                btn.innerHTML = '<svg id="cardbtn" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"> <circle cx="15" cy="15" r="15" fill="#326BFF"/></svg>'
+                const butn = document.createElement('button')
+                butn.innerHTML = '<svg id="cardbtn2" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"> <circle cx="15" cy="15" r="15" fill="#326BFF"/></svg>'
         container.classList.add('label');
         const label = document.createElement('label');
         const p = document.createElement('p');
+       
          
+        
+        
         switch(i){
             case 0:
                 const h2 = document.createElement('h2');   
@@ -78,13 +83,27 @@ export function buildWeather(object){
                 div.appendChild(container);
                 break;
             case 3:
+              
                 p.setAttribute('name','F');
                 label.setAttribute('for','F');
                 label.setAttribute('class','temp')
+                btn.setAttribute('id','tempBtn')
+                btn.addEventListener('click',()=>{
+                    const svg = document.getElementById('cardbtn')
+                    if(svg.hasAttribute('class','active')){
+                        svg.setAttribute('style','transform:translateX(0vw);')
+                        svg.removeAttribute('class','active')
+                    }else{
+                        svg.setAttribute('class','active')
+                       svg.setAttribute('style','transform:translateX(2vw);')
+                    }
+                  })
+       
                 p.innerHTML = object.tempF;
-                label.innerHTML = 'F<sup>o</sup>';
+                label.innerHTML = 'F<sup>o</sup>'
                 container.appendChild(label);
                 container.appendChild(p);
+                container.appendChild(btn)
                 div.appendChild(container);
                 break;
             case 4:
@@ -107,9 +126,23 @@ export function buildWeather(object){
                 p.setAttribute('name','mph');
                 label.setAttribute('for','mph');
                 p.innerHTML = object.windMPH;
+                butn.setAttribute('id','windBtn')
+              
+               butn.addEventListener('click',()=>{
+                    const svg2 = document.getElementById('cardbtn2')
+                    if(svg2.hasAttribute('class','active')){
+                        svg2.setAttribute('style','transform:translateX(0vw);')
+                        svg2.removeAttribute('class','active')
+                    }else{
+                        svg2.setAttribute('class','active')
+                       svg2.setAttribute('style','transform:translateX(2vw);')
+                    }
+                  })
+                  
                 label.innerHTML = 'Wind MPH:';
                 container.appendChild(label);
                 container.appendChild(p);
+                container.appendChild(butn)
                 div.appendChild(container);
                 break;
         }

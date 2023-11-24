@@ -10,15 +10,24 @@ body{
     
 }
 header{
+  
     background-color: #008000;   
-    padding: 5px;
+    padding: 2vh;
     justify-content: space-between;
     display: flex;
+    #sun{
+        position:absolute;
+        top: -7%;
+        left: 13%;
+    }
     h2{
+        
         color: white;
+        font-size: 35px;
+        top: -15%;
     }
     .searchBar{
-        margin-top: 20px;
+        margin-top: 30px;
     }
     #searchLabel{
         color: white;
@@ -38,6 +47,9 @@ header{
         background-color: #007FFF;
     }
     #enter:hover{
+        background-color: #17B169;
+    }
+    #random:hover{
         background-color: #17B169;
     }
     #random{
@@ -123,7 +135,33 @@ header{
                  min-width: 30vw;
                 align-items: center;
                  background-color: white;
-                 border: solid 1px black;     
+                 border: solid 1px black;  
+                 #tempBtn{
+                    width: 80px;
+                    height:34px;
+                    margin-top: 15px;
+                    border-radius:20px ;
+                    margin-left: 3vw;
+                    #cardbtn{
+                        margin-right: 30px;
+                        transition: transform 1s ease-in-out;
+                    }
+                 }
+                 #windBtn{
+                    width: 80px;
+                    height:34px;
+                    margin-top: 15px;
+                    border-radius:20px ;
+                    margin-left: 3vw;
+                    #cardbtn2{
+                        margin-right: 30px;
+                        transition: transform 1s ease-in-out;
+                 }
+                }
+                 .active{
+                  
+                    transform: translateX(2vw);
+                 }
                  .label{
                      p{
                          margin-left: 2vw;

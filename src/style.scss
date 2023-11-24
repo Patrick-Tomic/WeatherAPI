@@ -10,7 +10,7 @@ body{
     
 }
 header{
-  
+ 
     background-color: #008000;   
     padding: 2vh;
     justify-content: space-between;
@@ -20,7 +20,11 @@ header{
         top: -7%;
         left: 13%;
     }
-    h2{
+    #title:hover{
+        color: #FFD700;
+        cursor: pointer;
+    }
+    #title{
         
         color: white;
         font-size: 35px;
@@ -38,6 +42,9 @@ header{
         height: 2vh;
          
     }
+    #search:hover{
+        cursor: pointer;
+    }
     #enter{
         border: none;
         width: 5vw;
@@ -48,9 +55,11 @@ header{
     }
     #enter:hover{
         background-color: #17B169;
+        cursor: pointer;
     }
     #random:hover{
         background-color: #17B169;
+        cursor: pointer;
     }
     #random{
         border: none;
@@ -82,9 +91,15 @@ header{
         }
         button:hover{
             background-color: #6CB4EE;
+            cursor: pointer;
         }
        }
-        
+    #leftArrow:hover{
+        cursor: pointer;
+    }
+    #rightArrow:hover{
+        cursor: pointer;
+    }
     #leftArrow{
         top: 40%;
         left: 20%;
@@ -136,7 +151,10 @@ header{
                  min-width: 30vw;
                 align-items: center;
                  background-color: white;
-                 border: solid 1px black;  
+                 border: solid 1px black; 
+                 #tempBtn:hover{ 
+                 cursor: pointer;
+                 }
                  #tempBtn{
                     width: 80px;
                     height:34px;
@@ -147,6 +165,9 @@ header{
                         margin-right: 30px;
                         transition: transform 1s ease-in-out;
                     }
+                 }
+                 #windBtn:hover{
+                    cursor: pointer;
                  }
                  #windBtn{
                     width: 80px;
@@ -195,4 +216,5 @@ header{
  }
  
 }
+ 
  

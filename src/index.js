@@ -3,15 +3,13 @@ import RandomCity from './random';
 import { getWeather } from './retrieve';
 let count = 0
 let vw =32
-const mid = document.querySelector('#mid')
+const title = document.getElementById('title')
 const cardBtns = document.getElementById('cardButtons')
 const leftArrow = document.getElementById('leftArrow')
 const rightArrow = document.getElementById('rightArrow')
-const wrap = document.getElementById('wrap');
 const content = document.getElementById('content');   
 const enter = document.getElementById('enter');
 const search = document.getElementById('search');
-const card = document.getElementById('card')
 const randomBtn = document.getElementById('random')
 randomBtn.addEventListener('click',()=>{
   const divWrap = document.getElementById('divWrap')
@@ -29,12 +27,11 @@ randomBtn.addEventListener('click',()=>{
   }  
    getWeather(RandomCity());
 })
- getWeather('Tampa')
-
-getWeather('Ho Chi Minh')
-getWeather('Sydney')
-getWeather('New York')
-getWeather('tuzla')
+getWeather(RandomCity())
+getWeather(RandomCity())
+getWeather(RandomCity())
+getWeather(RandomCity())
+getWeather(RandomCity())
 search.addEventListener('keypress',(e)=>{
   if(e.key === 'Enter'){
     e.preventDefault()
@@ -231,5 +228,34 @@ search.addEventListener('keypress',(e)=>{
      
  },5000)
  
+ title.addEventListener('click',()=>{
+   clearInterval(interval)
+    divWrap.remove()
+    const div = document.createElement('div')
+    div.setAttribute('id', 'divWrap')
+    content.appendChild(div)
+  leftArrow.style.visibility = 'visible'
+  rightArrow.style.visibility = 'visible'
+  cardBtns.style.visibility = 'visible'
+  getWeather(RandomCity())
+getWeather(RandomCity())
+getWeather(RandomCity())
+getWeather(RandomCity())
+getWeather(RandomCity())
+interval = setInterval(()=>{
+  const divWrap = document.getElementById('divWrap')
+    let vw = 31
+    if(count == -4){ count = 0
+      vw = vw*count
+      divWrap.style.transform = `translateX(${vw}vw)` 
+    }
+    else {count--
+    vw = vw*count
+    divWrap.style.transform = `translateX(${vw}vw)` }
+    const enter = document.getElementById('enter');
+     
+ },5000)
+ }
+)
  
  

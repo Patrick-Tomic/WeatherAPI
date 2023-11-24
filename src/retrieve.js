@@ -41,6 +41,7 @@ export function buildWeather(object){
         container.classList.add('label');
         const label = document.createElement('label');
         const p = document.createElement('p');
+         
         switch(i){
             case 0:
                 const h2 = document.createElement('h2');   
@@ -57,6 +58,7 @@ export function buildWeather(object){
                     const h3 = document.createElement('h3');
                     label.setAttribute('for','state');
                     h3.setAttribute('name','state');
+                    label.setAttribute('class','state')
                     h3.innerHTML = object.state;
                     label.innerHTML = 'State:';
                     container.appendChild(label);
@@ -67,6 +69,7 @@ export function buildWeather(object){
             case 2:
                 const h4 = document.createElement('h3');
                 label.setAttribute('for','country');
+                label.setAttribute('class','country')
                 h4.setAttribute('name','country');
                 h4.innerHTML = object.country;
                 label.innerHTML = 'Country:';
@@ -77,6 +80,7 @@ export function buildWeather(object){
             case 3:
                 p.setAttribute('name','F');
                 label.setAttribute('for','F');
+                label.setAttribute('class','temp')
                 p.innerHTML = object.tempF;
                 label.innerHTML = 'F<sup>o</sup>';
                 container.appendChild(label);

@@ -18,7 +18,15 @@ getWeather('Ho Chi Minh')
 getWeather('Sydney')
 getWeather('New York')
 getWeather('tuzla')
- enter.addEventListener('click',()=>{
+search.addEventListener('keypress',(e)=>{
+  if(e.key === 'Enter'){
+    e.preventDefault()
+    enter.click()
+  }
+})
+
+ enter.addEventListener('click',(e)=>{
+  
   const divWrap = document.getElementById('divWrap')
   clearInterval(interval)
   let count = divWrap.childElementCount
@@ -34,6 +42,7 @@ getWeather('tuzla')
   }  
    getWeather(search.value);
     search.value = ''
+
  });
  
  leftArrow.addEventListener('click', ()=>{

@@ -12,9 +12,46 @@ body{
 header{
     background-color: #008000;   
     padding: 5px;
+    justify-content: space-between;
+    display: flex;
     h2{
         color: white;
     }
+    .searchBar{
+        margin-top: 20px;
+    }
+    #searchLabel{
+        color: white;
+        font-size: 24px;
+    }
+    #search{
+        width: 20vw;
+        height: 2vh;
+         
+    }
+    #enter{
+        border: none;
+        width: 5vw;
+        height: 3vh;
+        border-radius: 5px;
+        color: white;
+        background-color: #007FFF;
+    }
+    #enter:hover{
+        background-color: #17B169;
+    }
+    #random{
+        border: none;
+        width: 5vw;
+        height: 3vh;
+        border-radius: 5px;
+        color: white;
+        background-color: #007FFF;
+    }
+     .sidebar{
+        background: #008000;
+        border: none;
+     }
 }
 #mid{
     
@@ -92,13 +129,17 @@ header{
                          margin-left: 2vw;
                          font-size: 20px;
                          font-weight: bold;
+                          
                      }
                      display: flex;
                      label{
                          font-size: 24px;
-                         margin-top: 1vh;
+                        margin-top: 15px;
+                        margin-right: 1vw;
                          
                      }
+                   
+
                  }
              }
          }
@@ -110,19 +151,5 @@ header{
      
  }
  
-}
- #searchLabel{
-    margin-left: 36%;
- }
-#search{
-    width: 20vw;
-    margin-left: 36%;
-}
-#enter{
-    width: 5vw;
-    height: 3vh;
-    border-radius: 5px;
-    color: white;
-    background-color: green;
 }
  

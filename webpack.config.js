@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-__webpack_public_path__ = window.myDynamicPublicPath;
+ 
 module.exports = {
 	mode: 'development',
 	entry: {bundle: path.resolve(__dirname,'src/index.js')},

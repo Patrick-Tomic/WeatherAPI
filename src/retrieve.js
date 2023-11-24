@@ -33,7 +33,7 @@ export function buildWeather(object){
     const wrapper = document.getElementById('divWrap')
     const div = document.createElement('div');
     div.setAttribute('id','card');
-    
+   
     for(let i = 0;i<8;i++){
         const container = document.createElement('div');
         const btn = document.createElement('button')
@@ -93,9 +93,13 @@ export function buildWeather(object){
                     if(svg.hasAttribute('class','active')){
                         svg.setAttribute('style','transform:translateX(0vw);')
                         svg.removeAttribute('class','active')
+                        p.innerHTML = object.tempF;
+                        label.innerHTML = 'F<sup>o</sup>'
                     }else{
                         svg.setAttribute('class','active')
                        svg.setAttribute('style','transform:translateX(2vw);')
+                       p.innerHTML = object.tempC;
+                       label.innerHTML = 'C<sup>o</sup>'
                     }
                   })
        
@@ -103,7 +107,8 @@ export function buildWeather(object){
                 label.innerHTML = 'F<sup>o</sup>'
                 container.appendChild(label);
                 container.appendChild(p);
-                container.appendChild(btn)
+                if(wrapper.childElementCount==0){
+                container.appendChild(btn)}
                 div.appendChild(container);
                 break;
             case 4:
@@ -133,20 +138,27 @@ export function buildWeather(object){
                     if(svg2.hasAttribute('class','active')){
                         svg2.setAttribute('style','transform:translateX(0vw);')
                         svg2.removeAttribute('class','active')
+                        label.innerHTML = 'Wind MPH'
+                        p.innerHTML = object.windMPH
+                        
                     }else{
                         svg2.setAttribute('class','active')
                        svg2.setAttribute('style','transform:translateX(2vw);')
+                       label.innerHTML = "Wind KPH"
+                        p.innerHTML = object.windKPH
                     }
                   })
                   
                 label.innerHTML = 'Wind MPH:';
                 container.appendChild(label);
                 container.appendChild(p);
-                container.appendChild(butn)
+                if(wrapper.childElementCount==0){
+                container.appendChild(butn)}
                 div.appendChild(container);
                 break;
         }
     }
+
     wrapper.appendChild(div);
     content.appendChild(wrapper);
 }

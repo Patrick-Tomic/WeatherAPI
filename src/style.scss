@@ -129,6 +129,7 @@ header{
             display: flex;
            
              #card{
+                 
                 display: flex;
                 flex-direction: column;
                 padding: 5px;
@@ -163,6 +164,10 @@ header{
                     transform: translateX(2vw);
                  }
                  .label{
+                    .temp{
+                        margin-top: 12px;
+                         
+                    }
                      p{
                          margin-left: 2vw;
                          font-size: 20px;

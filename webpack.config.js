@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
@@ -19,6 +18,7 @@ module.exports = {
 		filename: '[name].js',
 		path: path.resolve(__dirname,'dist'),
 		clean:true,
+        publicPath: "/WeatherAPI/",
 	},
 	module:{
 		rules:[

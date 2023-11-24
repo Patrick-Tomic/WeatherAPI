@@ -1,13 +1,7 @@
 const path = require('path');
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const productConfig = merge([
-    {
-        output: {
-            publicPath: '/WeatherAPI/'
-        },
-    },
-]);
+__webpack_public_path__ = window.myDynamicPublicPath;
 module.exports = {
 	mode: 'development',
 	entry: {bundle: path.resolve(__dirname,'src/index.js')},
@@ -22,7 +16,7 @@ module.exports = {
 			template: 'src/template.html'
 		}),
 	],
-	output: {
+    output: {
 		filename: '[name].js',
 		path: path.resolve(__dirname,'dist'),
 		clean:true,

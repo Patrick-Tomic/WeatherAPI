@@ -1,6 +1,13 @@
 const path = require('path');
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const productConfig = merge([
+    {
+        output: {
+            publicPath: '/WeatherAPI/'
+        },
+    },
+]);
 module.exports = {
 	mode: 'development',
 	entry: {bundle: path.resolve(__dirname,'src/index.js')},
@@ -19,7 +26,7 @@ module.exports = {
 		filename: '[name].js',
 		path: path.resolve(__dirname,'dist'),
 		clean:true,
-        publicPath: "/WeatherAPI/",
+         
         
 	},
 	module:{

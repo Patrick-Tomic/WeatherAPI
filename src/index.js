@@ -1,5 +1,5 @@
 import './style.scss';
- 
+import RandomCity from './random';
 import { getWeather } from './retrieve';
 let count = 0
 let vw =32
@@ -12,6 +12,23 @@ const content = document.getElementById('content');
 const enter = document.getElementById('enter');
 const search = document.getElementById('search');
 const card = document.getElementById('card')
+const randomBtn = document.getElementById('random')
+randomBtn.addEventListener('click',()=>{
+  const divWrap = document.getElementById('divWrap')
+  clearInterval(interval)
+  let count = divWrap.childElementCount
+  console.log(count)
+  if(divWrap.childElementCount >=1){
+    divWrap.remove()
+    const div = document.createElement('div')
+    div.setAttribute('id', 'divWrap')
+    content.appendChild(div)
+    leftArrow.style.visibility = 'hidden'
+    rightArrow.style.visibility = 'hidden'
+    cardBtns.style.visibility = 'hidden'
+  }  
+   getWeather(RandomCity());
+})
  getWeather('Tampa')
 
 getWeather('Ho Chi Minh')
